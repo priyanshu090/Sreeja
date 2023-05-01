@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="icon" href="./heart.jpg" type="image/jpeg">
+    <title>Sreeja</title>
+    <style>
+        body {
+            background-color: rgb(219, 214, 252);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-style: italic;
+            text-align: center;
+        }
+          
+.heart {
+    text-align: center;
+    background: red;
+    position: relative;
+    height: 100px;
+    width:100px;
+    /* Animation */
+    transform: rotate(-45deg) scale(1);
+    animation: pulse 2s linear infinite;
+}
+  
+  
+.heart::after {
+    /* background:blue; */
+    background:inherit;
+    border-radius: 50%; /* To make circle */
+    content:'';
+    position:absolute;
+    /* top: -100px;*/
+    top: -50%; /* Inherit properties of parent */
+    /* left: -100px; */
+    left:0;
+    height: 100px;
+    width:100px;
+}
+.heart::before {
+   /* background:green; */
+  text-align: center;
+    background:pink; 
+    border-radius: 50%; /* To make circle */
+    content:'';
+    position:absolute;
+    top:0; 
+    right:-50%; /* Inherit properties of parent */
+    height: 100px;
+    width:100px;
+}
+  
+@keyframes pulse{
+    0% {
+        transform: rotate(-45deg) scale(1);
+        opacity: 0;
+    }/*
+    10% {
+        transform: rotate(-45deg) scale(1.3);
+    }
+    20% {
+        transform: rotate(-45deg) scale(0.9);
+    }
+    30% {
+        transform: rotate(-45deg) scale(1.2);
+    }
+    20% {
+        transform: rotate(-45deg) scale(0.9);
+    }*/
+    50% {
+        transform: rotate(-45deg) scale(1.3);
+        opacity: 1;
+    }/*
+    60% {
+        transform: rotate(-45deg) scale(0.95);
+    }
+    70% {
+        transform: rotate(-45deg) scale(1);
+    } */
+    100% {
+        transform: rotate(-45deg) scale(1);
+        opacity: 1;
+    }
+}
+:root {
+        --color1: #ffca4d;
+        --color2: #f70d1a;
+        --color3: #e98b39;
+        --color4: #9e3c3c;
+      }
+
+      /* Define the animation */
+      @keyframes change-colors {
+        0% { color: var(--color1); }
+        25% { color: var(--color2); }
+        50% { color: var(--color3); }
+        75% { color: var(--color4); }
+        100% { color: var(--color1); }
+      }
+
+      /* Apply the animation to the text */
+      #h5 {
+        animation: change-colors 5s infinite;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="mar m-3">
+        <h1 id="sreeja" style="color: blueviolet;">I just need 1 minute of you day!!</h1>
+        <h1 id="h1" hidden>You here?</h1>
+        <button type="submit" hidden value="Yes?" class="btn btn-outline-dark" style="position: fixed;" onclick="clicked1(this)" id="btn1">Yes?</button>
+        <img hidden src="./Screenshot 2023-05-01 180105.png" style="width:20%; float: left;" id="img1" class="mt-3">
+        <p style="float: left;" id="p1" hidden>I like my days starting with this!!</p>
+
+        <h1 id="h2" hidden class="mt-2">Are you prepared for this?</h1>
+        <button type="submit" hidden value="Yes?" class="btn btn-outline-danger" onclick="clicked3(this)" id="btn2">Yes?</button>
+        <img src="./good.png"class="mt-3" hidden style="width:20%; float: right;" id="img2">
+        <p style="float: right;" id="p2" hidden>And maybe ending with this!!</p>
+        
+        
+        <h1 id="h3" hidden class="mt-3">Really?</h1>
+        <button type="submit" hidden value="Yes?" id="btn3" class="btn btn-outline-info" onclick="clicked2(this)">Yes?</button>
+        <img src="./Screenshot 2023-05-01 175844.png" class="mt-3" hidden style="width:20%; float: left;" id="img3">
+        <p style="float: left;" id="p3" hidden>Love when you tell me story</p>
+
+        <h1 id="h4" hidden class="mt-5">Thanks for coming in my life!!</h1>
+        
+        <img src="./Screenshot 2023-05-01 180139.png" hidden class="mt-3" style="float: right; margin-top: 20%;" id="img4">
+        <p style="float: right;" id="p4" hidden>Getting wished by you</p>
+        
+        <img src="./Screenshot 2023-05-01 180245.png" hidden style="width:20%; float: left;" class="mt-3" id="img5">
+        <p style="float: left;" id="p5" hidden>Got habit of getting my text ignored😂😂</p>
+        
+        <img src="./Screenshot 2023-05-01 175912.png" hidden style="width:20%; float: left;" class="mt-3" id="img6">
+        <p style="float: left;" id="p6" hidden>Loved getting love back!</p>
+        
+        <img src="./Screenshot 2023-05-01 180215.png" hidden style="width:20%; float: left;" class="mt-3" id="img7">
+        <p style="float: left;" id="p7" hidden>Thanks for taking care of me for this much</p>
+
+        <h1 id="h5" hidden style="color: rgb(255, 0, 43); text-decoration: wavy;" class="mt-5"> <b>I love you</b></h1>
+
+        <h1 id="sreeja" hidden style="font-family: 'Times New Roman', Times, serif; color: red;"></h1>
+        <h1 id="saha" hidden style="font-family: 'Times New Roman', Times, serif; color: red;"></h1>
+        <!-- <h1 id="sreeja" hidden style="font-family: 'Times New Roman', Times, serif; color: red;"></h1> -->
+    </div>
+    <script>
+        btn1 = document.getElementById('btn1')
+        btn2 = document.getElementById('btn2')
+        btn3 = document.getElementById('btn3')
+        h1 = document.getElementById('h1')
+        h2 = document.getElementById('h2')
+        h3 = document.getElementById('h3')
+        h4 = document.getElementById('h4')
+        h5 = document.getElementById('h5')
+        p1 = document.getElementById('p1')
+        p2 = document.getElementById('p2')
+        p3 = document.getElementById('p3')
+        p4 = document.getElementById('p4')
+        p5 = document.getElementById('p5')
+        p6 = document.getElementById('p6')
+        p7 = document.getElementById('p7')
+        img1=document.getElementById('img1')
+        img2=document.getElementById('img2')
+        img3=document.getElementById('img3')
+        img4=document.getElementById('img4')
+        img5=document.getElementById('img5')
+        img6=document.getElementById('img6')
+        img7=document.getElementById('img7')
+        saha=document.getElementById('saha')
+        sreeja=document.getElementById("sreeja")
+        setTimeout(function(){
+            sreeja.hidden=true
+            btn1.hidden=false
+            h1.hidden=false
+        },2000)
+        function clicked1(eve) {
+            btn1.hidden = true
+            h1.hidden = true
+            btn2.hidden = false
+            h2.hidden = false
+        }
+
+        function clicked3() {
+            btn2.hidden = true
+            h2.hidden = true
+            btn3.hidden = false
+            h3.hidden = false
+        }
+        function clicked2() {
+            btn3.hidden = true
+            h3.hidden = true
+            saha.hidden=false
+            sreeja.hidden=false
+            sreeja.innerHTML="Ok then"
+            saha.innerHTML="3"
+
+            setTimeout(function(){
+                sreeja.hidden=true
+            saha.innerHTML="2"
+            },1000)
+
+            setTimeout(function(){
+                saha.innerHTML='1'
+            },2000)
+            
+            setTimeout(function(){
+                saha.hidden=true
+                document.body.style.backgroundColor = '#a2c4fc';
+                p1.hidden=false
+                img1.hidden=false
+                
+            },3100)
+            
+            setTimeout(function(){
+                p2.hidden=false
+                img2.hidden=false
+            },4000)
+            
+            setTimeout(function(){
+                p3.hidden=false
+                img3.hidden=false
+            },5000)
+            
+            setTimeout(function(){
+                p4.hidden=false
+                img4.hidden=false
+            },6000)
+            
+            setTimeout(function(){
+                p5.hidden=false
+                img5.hidden=false
+            },7000)
+
+            setTimeout(function(){
+                p6.hidden=false
+                img6.hidden=false
+            },8000)
+            
+            setTimeout(function(){
+                p7.hidden=false
+                img7.hidden=false
+            },9000)
+            
+            setTimeout(function(){
+                p5.hidden=true
+                img5.hidden=true
+                p1.hidden=true
+                img1.hidden=true
+                p2.hidden=true
+                img2.hidden=true
+                p3.hidden=true
+                img3.hidden=true
+                p4.hidden=true
+                img4.hidden=true
+                p6.hidden=true
+                img6.hidden=true
+                p7.hidden=true
+                img7.hidden=true
+                // h4.hidden=true
+                h4.hidden=false
+                h5.hidden=false
+            },10000)
+
+            setTimeout(function(){
+                h5.hidden=true
+                h4.innerHTML="Chl ab nikl yha se"
+            },12000)
+            
+            setTimeout(function(){
+                h4.innerHTML="Kripya krke fuck off ho jaiye"
+            },13000)
+            setTimeout(function(){
+                h4.innerHTML="Jaa be"
+            },14000)
+            setTimeout(function(){
+                h4.innerHTML="Bhg yha se"
+            },15000)
+            setTimeout(function(){
+                h4.innerHTML="Mai hi jata hu"
+            },15000)
+            setTimeout(function(){
+                h4.hidden=true
+                document.body.style.backgroundColor='black'
+            },16000)
+            
+
+        }
+    </script>
+</body>
+
+</html>
